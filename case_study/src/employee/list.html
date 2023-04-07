@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sách nhân viên</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous">
+    </script>
+</head>
+<body>
+<div th:insert="layout::header"></div>
+<div th:insert="layout::navbar"></div>
+<div class="row">
+    <!--    <div class="col-1"></div>-->
+    <div class="col-12 container-fluid">
+        <h1 class="text-center">Danh sách nhân viên</h1>
+        <a th:href="@{/employee/create}">
+            <button class="btn btn-primary">Thêm mới</button>
+        </a>
+        <div class="text-danger">
+            <div th:if="${mess}">
+                <p th:text="${mess}"></p>
+            </div>
+        </div>
+        <form class="d-flex m-0" th:action="@{/employee}" method="get">
+            <input class="me-2" name="nameSearch" placeholder="Tìm theo tên" th:value="${nameSearch}">
+            <input class="me-2" name="emailSearch" placeholder="Tìm theo email" th:value="${emailSearch}">
+            <select class="me-2" name="divisionSearch">
+                <option value="">Chọn</option>
+                <option th:each="division: ${divisionList}" th:value="${division.id}"
+                        th:text="${division.name}"
+                        th:selected="${division.id} == ${divisionSearch}">
+                </option>
+            </select>
+            <button class="btn btn-primary" type="submit">Tìm kiếm</button>
+        </form>
+        <button id="btn" type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                data-bs-toggle="modal" data-bs-target="#deleteModals">Xoá nhiều
+        </button>
+        <table class="table table-striped">
+            <tr class="text-center">
+                <th>STT</th>
+                <th>Tên</th>
+                <th>Ngày sinh</th>
+                <th>Mã số</th>
+                <th>Lương</th>
+                <th>Số điện thoại</th>
+                <th>Email</th>
+                <th>Địa chỉ</th>
+                <th>Vị trí</th>
+                <th>Học vấn</th>
+                <th>Bộ phận</th>
+                <th>Tùy chọn</th>
+            </tr>
+            <tr class="text-center" th:each="employee, row : ${employeeList}">
+                <td th:text="${row.count}"></td>
+                <td th:text="${employee.name}"></td>
+                <td th:text="${employee.date_of_birth}"></td>
+                <td th:text="${employee.id_card}"></td>
+                <td th:text="${employee.salary}"></td>
+                <td th:text="${employee.phone_number}"></td>
+                <td th:text="${employee.email}"></td>
+                <td th:text="${employee.address}"></td>
+                <td th:text="${employee.positionId.name}"></td>
+                <td th:text="${employee.educationDegreeId.name}"></td>
+                <td th:text="${employee.divisionId.name}"></td>
+                <td>
+                    <a th:href="@{/employee/edit(id=${employee.getId()})}">
+                        <button class="btn btn-primary">Sửa</button>
+                    </a>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal"
+                            th:attr="onclick=|deleteBlog('${employee.getId()}','${employee.getName()}')|">Xoá
+                    </button>
+                    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#detail"
+                            th:attr="onclick=|showDetail('${employee.getId()}', '${employee.getName()}',
+                             '${employee.positionId.getName()}','${employee.date_of_birth}',
+                             '${employee.phone_number}')|">Chi tiết
+                    </button>
+                    <label>
+                        <input name="idDelete" class="form-check-input" type="checkbox" th:value="${employee.getId()}">
+                    </label>
+                </td>
+            </tr>
+        </table>
+
+
+        <!--Modal delete-->
+        <div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false"
+             tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Xoá</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Bạn có muốn xoá nhân viên <span id="nameBlogDelete"></span> không?
+                    </div>
+                    <form th:action="@{/employee/delete}" method="get">
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Đóng
+                            </button>
+                            <button type="submit" class="btn btn-danger">Xoá</button>
+                            <input hidden name="id" type="text" id="idDelete">
+                            <input hidden name="action" value="delete" type="text" id="">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--Modal detail-->
+        <div class="modal fade" id="detail" tabindex="-1" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Chi tiết</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-4"><h5>Mã blog</h5></div>
+                                <h5></h5>
+                                <div class="col-md-8 ms-auto" id="showIdDetail"></div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-4"><h5>Tiêu đề</h5></div>
+                                <div class="col-md-8 ms-auto" id="showTitleDetail"></div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-4"><h5>Danh mục</h5></div>
+                                <div class="col-md-8 ms-auto" id="showCategoryDetail"></div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-4"><h5>Thời gian đăng</h5></div>
+                                <div class="col-md-8 ms-auto" id="showTimeDetail"></div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-4"><h5>Tình trạng</h5></div>
+                                <div class="col-md-8 ms-auto" id="showStatusDetail"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Modal delete nhiều-->
+        <div class="modal fade" id="deleteModals" data-bs-backdrop="static" data-bs-keyboard="false"
+             tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel1">Xoá nhân viên</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!--                        Bạn có muốn xoá blog có mã <span id="titleBlogDeletes"></span> không?-->
+                        Bạn có muốn xoá những nhân viên đã chọn không?
+                    </div>
+                    <form th:action="@{/employee/multiDelete}" method="get">
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng
+                            </button>
+                            <button type="submit" class="btn btn-danger">Xoá</button>
+                            <input hidden type="text" id="idDeleteMore" name="idDeleteMore">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:insert="layout::footer"></div>
+</body>
+<script th:inline="javascript">
+    function deleteBlog(id, name) {
+        document.getElementById('nameBlogDelete').innerText = name;
+        document.getElementById('idDelete').value = id;
+    }
+
+    function showDetail(id, title, category, time, status) {
+        document.getElementById("showIdDetail").value = id;
+        document.getElementById("showTitleDetail").innerText = title;
+        document.getElementById("showCategoryDetail").innerText = category;
+        document.getElementById("showTimeDetail").innerText = time;
+        document.getElementById("showStatusDetail").innerText = status;
+    }
+
+    document.getElementById('btn').onclick = function () {
+        let checkbox = document.getElementsByName('idDelete');
+        let result = "";
+        for (let i = 0; i < checkbox.length; i++) {
+            if (checkbox[i].checked === true) {
+                result += '.' + checkbox[i].value;
+            }
+        }
+        document.getElementById('idDeleteMore').value = result;
+    };
+</script>
+</html>
