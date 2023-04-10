@@ -1,0 +1,10 @@
+<h2>Calculator</h2>
+<label for="input1">First number: </label>
+<input #firstNumber type="text" id="input1"><br>
+<label for="input2">Second number: </label>
+<input #secondNumber type="text" id="input2"><br><br>
+<button type="button" id="add" (click)="addition(firstNumber.value, secondNumber.value)" >Addition (+)</button>
+<button type="button" id="subtract" (click)="subtraction(firstNumber.value, secondNumber.value);">Subtraction (-)</button>
+<button type="button" id="multiply" (click)="multiplication(firstNumber.value, secondNumber.value);">Multiplication (*)</button>
+<button type="button" id="divide" (click)="division(firstNumber.value, secondNumber.value);">Division (/)</button>
+<p id="result">Result: {{result}}</p>
