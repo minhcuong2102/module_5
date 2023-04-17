@@ -7,6 +7,7 @@ import {FormsModule} from "@angular/forms";
 import { LikeComponent } from './like/like.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { Ss5Component } from './ss5/ss5.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     ArticleComponent,
     LikeComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    Ss5Component
   ],
   imports: [
     BrowserModule,
