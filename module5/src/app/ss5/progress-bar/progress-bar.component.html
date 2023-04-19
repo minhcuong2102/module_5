@@ -1,0 +1,8 @@
+<h2>Progress Bar</h2>
+
+<div [style.backgroundColor]="backgroundColor" class="progress-bar-container">
+  <div [ngStyle]="{
+  backgroundColor: progressColor,
+  width: progress + '%'
+  }" class="progress"></div>
+</div>

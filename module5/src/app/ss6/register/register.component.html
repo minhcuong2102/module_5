@@ -1,0 +1,106 @@
+<div class="row">
+  <div class="col-3"></div>
+  <div class="col-6">
+    <h1 class="text-center">Đăng ký</h1>
+    <form [formGroup]="rfRegister">
+      <label for="email">Email</label>
+      <input class="form-control" formControlName="email" id="email" type="email">
+      <div *ngIf="rfRegister.controls.email?.invalid && rfRegister.controls.email.touched" class="alert alert-danger"
+           role="alert">
+        <p *ngIf="rfRegister.controls.email?.errors?.required">
+          Email không được trống!
+        </p>
+        <p *ngIf="rfRegister.controls.email?.errors?.minlength">
+          Email phải trên 6 kí tự!
+        </p>
+      </div>
+      <br>
+      
+      <label for="password">Mật khẩu</label>
+      <input #password class="form-control" formControlName="password" id="password" type="password">
+      <div *ngIf="rfRegister.controls.password?.invalid && rfRegister.controls.password.touched"
+           class="alert alert-danger"
+           role="alert">
+        <p *ngIf="rfRegister.controls.password?.errors?.required">
+          Password không được trống!
+        </p>
+        <p *ngIf="rfRegister.controls.password?.errors?.minlength">
+          Password phải trên 6 kí tự!
+        </p>
+      </div>
+      <br>
+
+      <label for="confirmPassword">Xác nhận mật khẩu</label>
+      <input #confirmPassword class="form-control" formControlName="confirmPassword" id="confirmPassword"
+             type="password">
+      <div *ngIf="rfRegister.controls.confirmPassword?.invalid && rfRegister.controls.confirmPassword.dirty"
+           class="alert alert-danger"
+           role="alert">
+        <p *ngIf="rfRegister.controls.confirmPassword?.errors?.required">
+          Confirm password không được trống!
+        </p>
+        <p *ngIf="rfRegister.controls.confirmPassword?.errors?.minlength">
+          Confirm password phải trên 6 kí tự!
+        </p>
+        <p *ngIf="password.value != confirmPassword.value">
+          Confirm password trùng với password!
+        </p>
+      </div>
+      <br>
+
+      <label for="country">Quốc gia</label>
+      <div class="input-group">
+        <select class="form-select" formControlName="country" id="country" name="">
+          <option>Việt Nam</option>
+          <option>Hoa Kỳ</option>
+          <option>Trung Quốc</option>
+        </select>
+      </div>
+      <div *ngIf="rfRegister.controls.country?.invalid && rfRegister.controls.country.touched"
+           class="alert alert-danger"
+           role="alert">
+        <p *ngIf="rfRegister.controls.country?.errors?.required">
+          Quốc gia không được trống!
+        </p>
+      </div>
+      <br>
+
+      <label for="age">Tuổi</label>
+      <input class="form-control" formControlName="age" id="age" type="text">
+      <div *ngIf="rfRegister.controls.age?.invalid && rfRegister.controls.age.touched"
+           class="alert alert-danger"
+           role="alert">
+        <p *ngIf="rfRegister.controls.age?.errors?.required">
+          Tuổi không được trống!
+        </p>
+        <p *ngIf="rfRegister.controls.age?.errors?.min">
+          Tuổi không được dưới 18!
+        </p>
+      </div>
+      <br>
+
+      <label>Giới tính</label><br>
+      <input class="form-check-input" formControlName="gender" type="radio" value="true">
+      Nam
+      <input class="form-check-input" formControlName="gender" type="radio" value="false">
+      Nữ
+      <br><br>
+
+      <label for="phone">Số điện thoại</label><br>
+      <input class="form-control" formControlName="phone" id="phone" type="text">
+      <div *ngIf="rfRegister.controls.phone?.invalid && rfRegister.controls.phone.touched"
+           class="alert alert-danger"
+           role="alert">
+        <p *ngIf="rfRegister.controls.phone?.errors?.required">
+          Số điện thoại không được trống!
+        </p>
+        <p *ngIf="rfRegister.controls.phone?.errors?.pattern">
+          Số điện thoại phải bắt đầu bằng +84, và sau đó có ít nhất 9 chữ số!
+        </p>
+      </div>
+    </form>
+  </div>
+  <div class="col-3"></div>
+</div>
+
+

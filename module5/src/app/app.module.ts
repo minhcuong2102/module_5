@@ -7,6 +7,10 @@ import { NameCardComponent } from './ss5/name-card/name-card.component';
 import { ProgressBarComponent } from './ss5/progress-bar/progress-bar.component';
 import { RatingBarComponent } from './ss5/rating-bar/rating-bar.component';
 import { CountdownTimerComponent } from './ss5/countdown-timer/countdown-timer.component';
+import { Ss6Component } from './ss6/ss6.component';
+import { TodoComponent } from './ss6/todo/todo.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { RegisterComponent } from './ss6/register/register.component';
 
 @NgModule({
   declarations: [
@@ -15,11 +19,15 @@ import { CountdownTimerComponent } from './ss5/countdown-timer/countdown-timer.c
     NameCardComponent,
     ProgressBarComponent,
     RatingBarComponent,
-    CountdownTimerComponent
+    CountdownTimerComponent,
+    Ss6Component,
+    TodoComponent,
+    RegisterComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+    imports: [
+        BrowserModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
