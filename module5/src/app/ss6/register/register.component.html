@@ -15,7 +15,7 @@
         </p>
       </div>
       <br>
-      
+
       <label for="password">Mật khẩu</label>
       <input #password class="form-control" formControlName="password" id="password" type="password">
       <div *ngIf="rfRegister.controls.password?.invalid && rfRegister.controls.password.touched"
@@ -84,6 +84,13 @@
       Nam
       <input class="form-check-input" formControlName="gender" type="radio" value="false">
       Nữ
+      <div *ngIf="rfRegister.controls.gender?.invalid && rfRegister.controls.gender.touched"
+           class="alert alert-danger"
+           role="alert">
+        <p *ngIf="rfRegister.controls.gender?.errors?.required">
+          Hãy chọn một giới tính!
+        </p>
+      </div>
       <br><br>
 
       <label for="phone">Số điện thoại</label><br>
