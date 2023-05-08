@@ -1,0 +1,15 @@
+<h1>Danh sách danh mục sản phẩm</h1>
+<a routerLink="/category/create" class="btn btn-primary text-light">Tạo mới danh mục</a>
+<table class="table table-striped w-50">
+  <tr>
+    <th>STT</th>
+    <th>Tên</th>
+    <th>Hành động</th>
+  </tr>
+  <tr *ngFor="let category of categories; index as i">
+    <td>{{i + 1}}</td>
+    <td>{{category.name}}</td>
+    <td><a [routerLink]="['/category/edit',category.id]"><button class="btn btn-primary">Edit</button></a></td>
+    <td><a [routerLink]="['/category/delete',category.id]"><button class="btn btn-danger">Delete</button></a></td>
+  </tr>
+</table>

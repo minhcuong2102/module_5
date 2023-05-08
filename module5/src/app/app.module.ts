@@ -16,12 +16,15 @@ import {TimelinesComponent} from './timelines/timelines.component';
 import {AppRoutingModule} from './app-routing.module';
 import {YoutubePlaylistComponent} from './youtube-playlist/youtube-playlist.component';
 import {YoutubePlayerComponent} from './youtube-player/youtube-player.component';
-import { ProductListComponent } from './product/product-list/product-list.component';
-import { ProductCreateComponent } from './product/product-create/product-create.component';
-import { DictionaryComponent } from './dictionary/dictionary.component';
-import { DictionaryDetailComponent } from './dictionary-detail/dictionary-detail.component';
-import { ProductEditComponent } from './product/product-edit/product-edit.component';
-import { ProductDeleteComponent } from './product/product-delete/product-delete.component';
+import {DictionaryComponent} from './dictionary/dictionary.component';
+import {DictionaryDetailComponent} from './dictionary-detail/dictionary-detail.component';
+import {HttpClientModule} from '@angular/common/http';
+import {ImageGalleryComponent} from './component/image-gallery/image-gallery.component';
+import {ImageCardComponent} from './component/image-gallery/image-card/image-card.component';
+import {ImageGalleryModule} from './image-gallery/image-gallery.module';
+import {GalleryConfig} from './component/image-gallery/token';
+import { CategoryListComponent } from './component/category/category-list/category-list.component';
+
 
 @NgModule({
   declarations: [
@@ -38,19 +41,20 @@ import { ProductDeleteComponent } from './product/product-delete/product-delete.
     TimelinesComponent,
     YoutubePlaylistComponent,
     YoutubePlayerComponent,
-    ProductListComponent,
-    ProductCreateComponent,
     DictionaryComponent,
     DictionaryDetailComponent,
-    ProductEditComponent,
-    ProductDeleteComponent
+    ImageGalleryComponent,
+    ImageCardComponent,
+    CategoryListComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ImageGalleryModule
   ],
-  providers: [],
+  providers: [{provide: GalleryConfig, useValue: 3}],
   bootstrap: [AppComponent]
 })
 export class AppModule {
