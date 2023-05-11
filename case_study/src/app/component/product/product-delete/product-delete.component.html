@@ -1,0 +1,33 @@
+<h1>Cập nhật thông tin sản phẩm</h1>
+<form [formGroup]="productForm" *ngIf="productForm">
+  <table>
+    <tr>
+      <td>Tên sản phẩm:</td>
+      <td><input #name type="text" formControlName="name" id="name"></td>
+    </tr>
+    <tr>
+      <td>Giá sản phẩm</td>
+      <td><input #price type="number" formControlName="price" id="price"></td>
+    </tr>
+    <tr>
+      <td>Mô tả về sản phẩm</td>
+      <td><input #description type="text" formControlName="description" id="description"></td>
+    </tr>
+    <tr>
+      <td>Loại sản phẩm</td>
+      <td>
+        <div class="input-group">
+          <label for=""></label>
+          <select class="form-select" name="" id="" formControlName="category">
+            <option *ngFor="let category of categoryList" [ngValue]="category">{{category.name}}</option>
+          </select>
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button class="btn btn-danger" (click) ="deleteProduct(id)">Xóa</button></td>
+    </tr>
+  </table>
+</form>

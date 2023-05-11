@@ -1,0 +1,88 @@
+<h1>Danh sách các bài viết đã đăng</h1>
+<div class="row">
+  <div class="col-1"></div>
+  <div class="col-10">
+    <a class="btn btn-primary" routerLink="/bds/create">Thêm mới</a>
+    <br>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modelId">
+      Tìm
+    </button>
+    <table class="table table-hover">
+      <tr>
+        <th>Tiêu đề</th>
+        <th>Loại bài viết</th>
+        <th>Danh mục</th>
+        <th>Ngày đăng</th>
+        <th>Trạng thái</th>
+      </tr>
+      <tr *ngFor="let bds of bdsList; index as i">
+        <td>{{bds.title}}</td>
+        <td>{{bds.type.name}}</td>
+        <td>{{bds.category.name}}</td>
+        <td>{{bds.date}}</td>
+        <td>{{bds.status}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modelTitleId">Tìm kiếm</h4>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table-light">
+          <tr>
+            <td>Diện tích </td>
+            <td>
+              <select #area name="" style="margin-left: 10px">
+                <option value="">Tất cả</option>
+                <option value="50">Trên 50 m2</option>
+                <option value="100">Trên 100 m2</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="margin-left: 10px">Giá</td>
+            <td>
+              <select #price name="" style="margin-left: 10px">
+                <option value="">Tất cả</option>
+                <option value="200000000">Trên 200 triệu</option>
+                <option value="500000000">Trên 500 triệu</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Hướng</td>
+            <td>
+              <select #direction id="direction" name="" style="margin-left: 10px">
+                <option value="">Tất cả</option>
+                <option value="Đông">Đông</option>
+                <option value="Tây">Tây</option>
+                <option value="Nam">Nam</option>
+                <option value="Bắc">Bắc</option>
+              </select>
+            </td>
+          </tr>
+
+        </table>
+
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+        <button (click)="search(area.value, price.value, direction.value)" class="btn btn-primary" type="button" data-bs-dismiss="modal">Tìm kiếm</button>
+      </div>
+    </div>
+  </div>
+</div>

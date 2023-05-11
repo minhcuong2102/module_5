@@ -1,0 +1,102 @@
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+    <a class="btn btn-primary" routerLink="/bds/list">Trở về danh sách</a>
+    <h1>Thêm mới</h1>
+    <form (ngSubmit)="submit1()" [formGroup]="createForm" class="w-100">
+      <table border="0" class="table-hover" style="border-collapse: unset">
+        <tr>
+          <td>Danh mục</td>
+          <td>
+            <select formControlName="category">
+              <option *ngFor="let category of categories" [ngValue]="category">{{category.name}}</option>
+            </select>
+          </td>
+          <p class="text-danger" *ngIf="createForm.controls.category?.touched && createForm.controls.category?.errors?.required">Bắt buộc nhập</p>
+        </tr>
+        <tr>
+          <td>Vùng miền</td>
+          <td>
+            <select formControlName="region">
+              <option value="Hà Nội">Hà Nội</option>
+              <option value="Đà Nẵng">Đà Nẵng</option>
+              <option value="Tp. Hồ Chí Minh">Tp. Hồ Chí Minh</option>
+            </select>
+          </td>
+          <p class="text-danger" *ngIf="createForm.controls.region?.touched && createForm.controls.region?.errors?.required">Bắt buộc nhập</p>
+        </tr>
+        <tr>
+          <td>Bạn là:</td>
+          <td><input formControlName="name" type="radio" value="Cá nhân"> Cá nhân</td>
+          <td><input formControlName="name" type="radio" value="Công ty"> Công ty</td>
+          <p class="text-danger" *ngIf="createForm.controls.name?.touched && createForm.controls.name?.errors?.required">Bắt buộc nhập</p>
+        </tr>
+        <tr>
+          <td>Bạn đăng tin:</td>
+          <td>
+            <select formControlName="type">
+              <option *ngFor="let type of types" [ngValue]="type">{{type.name}}</option>
+            </select>
+          </td>
+          <p class="text-danger" *ngIf="createForm.controls.type?.touched && createForm.controls.type?.errors?.required">Bắt buộc nhập</p>
+        </tr>
+        <tr>
+          <td>Tình trạng: </td>
+          <td><input type="radio" value="Mới" formControlName="status"> Mới</td>
+          <td><input type="radio" value="Đã sử dung" formControlName="status"> Đã sử dụng</td>
+          <p class="text-danger" *ngIf="createForm.controls.status?.touched && createForm.controls.status?.errors?.required">Bắt buộc nhập</p>
+        </tr>
+        <tr>
+          <td>Địa chỉ (*)</td>
+          <td><input type="text" formControlName="address"></td>
+          <p class="text-danger" *ngIf="createForm.controls.address?.touched && createForm.controls.address?.errors?.required">Bắt buộc nhập</p>
+        </tr>
+        <tr>
+          <td>Diện tích (*)</td>
+          <td><input type="number" formControlName="area"></td>
+          <p class="text-danger" *ngIf="createForm.controls.area?.touched && createForm.controls.area?.errors?.required">Bắt buộc nhập</p>
+          <p class="text-danger" *ngIf="createForm.controls.area?.touched && createForm.controls.area?.errors?.min">Diện tích phải trên 20m2</p>
+        </tr>
+        <tr>
+          <td>Hướng</td>
+          <td>
+            <select formControlName="direction">
+              <option value="Đông">Đông</option>
+              <option value="Tây">Tây</option>
+              <option value="Nam">Nam</option>
+              <option value="Bắc">Bắc</option>
+            </select>
+          </td>
+          <p class="text-danger" *ngIf="createForm.controls.direction?.touched && createForm.controls.direction?.errors?.required">Bắt buộc nhập</p>
+        </tr>
+        <tr>
+          <td>Tựa đề: (*)</td>
+          <td><input type="text" formControlName="title"></td>
+          <p class="text-danger" *ngIf="createForm.controls.title?.touched && createForm.controls.title?.errors?.required">Bắt buộc nhập</p>
+        </tr>
+        <tr>
+          <td>Nội dung: (*)</td>
+          <td><input type="text" formControlName="content"></td>
+          <p class="text-danger" *ngIf="createForm.controls.content?.touched && createForm.controls.content?.errors?.required">Bắt buộc nhập</p>
+        </tr>
+        <tr>
+          <td>Giá: (*)</td>
+          <td><input type="number" formControlName="price"></td>
+          <input type="checkbox"> Giá cả có thể thỏa thuận
+          <p class="text-danger" *ngIf="createForm.controls.price?.touched && createForm.controls.price?.errors?.required">Bắt buộc nhập</p>
+          <p class="text-danger" *ngIf="createForm.controls.price?.touched && createForm.controls.price?.errors?.min">Giá phải trên 100.000.000đ</p>
+        </tr>
+        <tr>
+          <td>Ngày</td>
+          <td><input type="date" formControlName="date"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button class="btn btn-primary">Tạo mới</button></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <div class="col-2"></div>
+</div>
+

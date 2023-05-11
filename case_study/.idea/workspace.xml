@@ -20,7 +20,112 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32a18c0c-2a65-474f-adcc-d9dcb7ae4cae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/category/category-create/category-create.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/category/category-create/category-create.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/category/category-create/category-create.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/category/category-delete/category-delete.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/category/category-delete/category-delete.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/category/category-delete/category-delete.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/category/category-edit/category-edit.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/category/category-edit/category-edit.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/category/category-edit/category-edit.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/category/category-list/category-list.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/category/category-list/category-list.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/category/category-list/category-list.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/category/category-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/category/category.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/product/product-create/product-create.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/product/product-create/product-create.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/product/product-create/product-create.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/product/product-delete/product-delete.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/product/product-delete/product-delete.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/product/product-delete/product-delete.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/product/product-edit/product-edit.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/product/product-edit/product-edit.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/product/product-edit/product-edit.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/product/product-list/product-list.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/product/product-list/product-list.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/product/product-list/product-list.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/product/product/product-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/component/product/product/product.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/data/db.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/model/category.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/model/product.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/service/category.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/service/product.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/.idea/module5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/browserslist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/e2e/protractor.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/e2e/src/app.e2e-spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/e2e/src/app.po.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/e2e/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/app.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/component/category/category-create/category-create.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/component/category/category-create/category-create.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/component/category/category-create/category-create.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/component/category/category-delete/category-delete.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/component/category/category-delete/category-delete.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/component/category/category-delete/category-delete.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/component/category/category-edit/category-edit.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/component/category/category-edit/category-edit.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/component/category/category-edit/category-edit.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/component/category/category-list/category-list.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/component/category/category-list/category-list.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/component/category/category-list/category-list.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/component/category/category-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/component/category/category.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/data/db.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/model/category.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/model/product.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/service/category.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/app/service/product.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/assets/angular.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/environments/environment.prod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/environments/environment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/polyfills.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/src/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh/tslint.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/customer/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/customer/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/customer/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/employee/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/employee/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/employee/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module5/src/app/product/product-list/product-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module5/src/app/product/product-list/product-list.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +134,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2O6DTKlfqBaX7gBjJVOzO8zadob" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -40,18 +148,23 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/Codegym/module_5/case_study",
+    "last_opened_file_path": "E:/Codegym/module_5/thi_thuc_hanh",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "E:\\Codegym\\module_5\\case_study\\node_modules\\prettier",
+    "ts.external.directory.path": "E:\\Codegym\\module_5\\case_study\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Codegym\module_5\case_study\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Codegym\module_5\case_study\src\app\component" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -67,6 +180,7 @@
       <updated>1680872144763</updated>
       <workItem from="1680872146991" duration="899000" />
       <workItem from="1682338404359" duration="598000" />
+      <workItem from="1683677802428" duration="2036000" />
     </task>
     <servers />
   </component>
@@ -84,10 +198,7 @@
       </map>
     </option>
   </component>
-  <component name="WindowStateProjectService">
-    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1680872489984">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1680872489984" />
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

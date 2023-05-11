@@ -1,4 +1,15 @@
 <h1>Danh sách sản phẩm</h1>
+<div class="input-group">
+  <label for="name">Name</label>
+  <input #name type="text" id="name" class="form-control">
+
+  <div class="input-group">
+    <label for=""></label>
+    <select class="form-select" name="" id="" #category>
+      <option *ngFor="let category of categoryList" value="{{category.id}}">{{category.name}}</option>
+    </select>
+  </div>
+</div>
 <table class="table table-light">
   <tr>
     <th>STT</th>

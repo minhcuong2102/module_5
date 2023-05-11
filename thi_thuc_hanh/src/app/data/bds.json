@@ -1,0 +1,132 @@
+{
+  "bds": [
+    {
+      "id": 1,
+      "title": "Bài viết 1",
+      "type": {
+        "id": 1,
+        "name": "Căn bản"
+      },
+      "category": {
+        "id": 1,
+        "name": "Nhà Đất"
+      },
+      "date": "2023-05-06",
+      "status": "Đang rao",
+      "region": "Đà Nẵng",
+      "name": "Cá nhân",
+      "area": 60,
+      "direction": "Nam",
+      "content": "ágwegwegewg",
+      "price": 150000000
+    },
+    {
+      "id": 2,
+      "title": "Bài viết 2",
+      "type": {
+        "id": 1,
+        "name": "Căn bản"
+      },
+      "category": {
+        "id": 1,
+        "name": "Nhà Đất"
+      },
+      "date": "2023-05-06",
+      "status": "Chờ duyệt",
+      "region": "Đà Nẵng",
+      "name": "Cá nhân",
+      "area": 20,
+      "direction": "Đông",
+      "content": "ágwegwegewg",
+      "price": 4797979797
+    },
+    {
+      "id": 3,
+      "title": "egsgd",
+      "type": {
+        "id": 2,
+        "name": "Cần mua"
+      },
+      "category": {
+        "id": 1,
+        "name": "Nhà Đất"
+      },
+      "date": "",
+      "status": "Mới",
+      "region": "Hà Nội",
+      "name": "Cá nhân",
+      "address": "sdsdg",
+      "area": 120,
+      "direction": "Tây",
+      "content": "gẻger",
+      "price": 1000000000
+    },
+    {
+      "id": 4,
+      "title": "",
+      "type": "",
+      "category": {
+        "id": 1,
+        "name": "Nhà Đất"
+      },
+      "date": "",
+      "status": "",
+      "region": "",
+      "name": "",
+      "address": "",
+      "area": "",
+      "direction": "",
+      "content": "",
+      "price": ""
+    },
+    {
+      "id": 5,
+      "title": "sedrgrege",
+      "type": {
+        "id": 1,
+        "name": "Căn bản"
+      },
+      "category": {
+        "id": 1,
+        "name": "Nhà Đất"
+      },
+      "date": "2023-05-10",
+      "status": "Đã sử dung",
+      "region": "Đà Nẵng",
+      "name": "Cá nhân",
+      "address": "dfijfbiudfnidfng",
+      "area": 40,
+      "direction": "Đông",
+      "content": "rhreherher",
+      "price": 1000000000
+    }
+  ],
+  "types": [
+    {
+      "id": 1,
+      "name": "Căn bản"
+    },
+    {
+      "id": 2,
+      "name": "Cần mua"
+    },
+    {
+      "id": 3,
+      "name": "Cho thuê"
+    },
+    {
+      "id": 4,
+      "name": "Cần thuê"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Nhà Đất"
+    },
+    {
+      "id": 2,
+      "name": "Nhà"
+    }
+  ]
+}
